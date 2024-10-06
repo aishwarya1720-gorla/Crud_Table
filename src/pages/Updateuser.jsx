@@ -10,7 +10,7 @@ const Updateuser = () => {
         setValue({ ...value, [e.target.name]: e.target.value }); // e.target.value should not be in an array
     };
 
-console.log(useParams());
+// console.log(useParams());
 let {id} = useParams();
 useEffect(()=>{
     axios.get("http://localhost:3001/users/" + id)

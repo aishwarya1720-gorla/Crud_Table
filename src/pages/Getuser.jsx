@@ -12,14 +12,14 @@ const GetUsers = ()=>{
            setHead(Object.keys(x.data[0]).slice(0,4))
                    
          })
-    },[state])
+    },[])
     function deletes(id){
    axios.delete("http://localhost:3001/users/"+id)
    .then(()=>{
     navigate("/")
-   })   
+   },[])   
     }
-    console.log(thead);
+    // console.log(thead);
      return(
          <table border={2}>
             <caption>
